@@ -8,7 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features={"C://Users//yogemane//eclipse-workspace//NewCucumber//src//test//java//Features"},
 glue={"StepDefination"},
-monochrome= true, 
+monochrome= true,
+tags =("@Imp"),
 plugin= {"pretty","json:target/cucumber-reports/report2.json"})
 public class TestRunner {
 
