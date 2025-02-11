@@ -1,18 +1,16 @@
-Feature: Feature to test Login page 
+@SmoKE
+Feature: To check Add to cart functionality
 
-@Imp
-Scenario: Test Login page with Valid Credentials
+Background: User able to login to Swag Labs
 
-Given User able to access Swag Labs Web page
-When User enter valid Username and Password
+Given User able to access Swag Labs Login page
+When User enter username and password
 And clicks on Login button
-Then User navigated to Home screen
+Then User is navigated to Home Screen
 
 
-Scenario: Add Multiple Items in Add to Carts
+Scenario: To validate add to cart fucntionality
 
-Given User able to access Home screen after Login
-When User clicks on Sauce Labs backpack Add to cart
-And clicks on Sauce Labs Bike Light Add to cart button
-And Clicks on Add to cart button 
-Then Items which are selected that is visible on Add to cart page
+When User select Add to Cart button on Backpack and Bike Light Add to cart button
+And After clicking on Add to cart main button
+Then Selected Item is able to see

@@ -6,10 +6,10 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features={"C://Users//yogemane//eclipse-workspace//NewCucumber//src//test//java//Features"},
+@CucumberOptions(features={"C://Users//Yogesh//git//NewCucumber1//src//test//java//Features"},
 glue={"StepDefination"},
 monochrome= true,
-tags =("@Imp"),
+tags =("@SmoKE"),
 plugin= {"pretty","json:target/cucumber-reports/report2.json"})
 public class TestRunner {
 

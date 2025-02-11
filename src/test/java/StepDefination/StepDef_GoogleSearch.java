@@ -17,7 +17,7 @@ public class StepDef_GoogleSearch {
 	@Given("User Able to Open Google Search Page")
 	public void user_able_to_open_google_search_page() {
 	   
-		System.setProperty("webdriver.chrome.driver", "C://Users//yogemane//eclipse-workspace//NewCucumber//src//test//java//Drivers//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C://Users//Yogesh//git//NewCucumber1//src//test//java//Drivers//chromedriver.exe");
 		
 		sp=new ChromeDriver();
 		

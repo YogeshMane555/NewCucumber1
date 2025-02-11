@@ -1,6 +1,6 @@
 Feature: Feature to test Login Functionality
 
-@RegressionTest
+@RegressionTesting
 Scenario: Validate with Valid Username and Password
 
 Given User able to open DemoLogin Page

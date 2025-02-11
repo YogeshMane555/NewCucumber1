@@ -27,7 +27,7 @@ public class Object_DemoQALogin {
 		
 		this.sp=sp;
 		
-		PageFactory.initElements(sp, Object_DemoQALogin.class);
+		PageFactory.initElements(sp, this);
 	}
 	
 	
@@ -44,6 +44,11 @@ public class Object_DemoQALogin {
 	public void clickLogin()
 	{
 		btn_login.click();
+	}
+	
+	public void clickLogOut()
+	{
+		btn_logout.click();
 	}
 	
 	public Boolean ValidateLogout()

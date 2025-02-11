@@ -1,5 +1,6 @@
 Feature: Login Feature for DemoQA
 
+@Regression
 Scenario: Validate Login Feature on DemoQA
 
 Given User able to open DemoQA Page

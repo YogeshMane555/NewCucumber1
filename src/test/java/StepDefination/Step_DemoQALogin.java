@@ -19,8 +19,7 @@ public class Step_DemoQALogin {
 	@Given("User able to open DemoQA Page")
 	public void user_able_to_open_demo_qa_page() {
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\yogemane\\eclipse-workspace\\NewCucumber\\src\\test\\java\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Yogesh\\git\\NewCucumber1\\src\\test\\java\\Drivers\\chromedriver.exe");
 
 		sp = new ChromeDriver();
 
@@ -56,11 +55,17 @@ public class Step_DemoQALogin {
 	}
 
 	@Then("User is navigated to Home screen")
-	public void user_is_navigated_to_home_screen() {
+	public void user_is_navigated_to_home_screen() throws InterruptedException {
 		
 		Boolean b=odlogin.ValidateLogout();
 		
 		System.out.println("Is Logout button Visible ?:"+b);
+		
+		odlogin.clickLogOut();
+		
+		Thread.sleep(2000);
+		
+		sp.quit();
 
 	}
 
