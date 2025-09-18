@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features={"C://Users//Yogesh//git//NewCucumber1//src//test//java//Features"},
 glue={"StepDefination"},
 monochrome= true,
-tags =("@SmoKE"),
-plugin= {"pretty","json:target/cucumber-reports/report2.json"})
+tags =("@CheckOut"))
+//plugin= {"json:target/cucumber-reports/Report.json"})
 public class TestRunner {
 
 }
