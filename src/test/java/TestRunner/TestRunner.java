@@ -1,16 +1,15 @@
 package TestRunner;
 
-import org.junit.runner.RunWith;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features={"C://Users//Yogesh//git//NewCucumber1//src//test//java//Features"},
-glue={"StepDefination"},
-monochrome= true,
-tags =("@CheckOut"))
-//plugin= {"json:target/cucumber-reports/Report.json"})
-public class TestRunner {
+@CucumberOptions(features={"classpath:Features"},
+glue= {"classpath:StepDefination"},
+tags= "@Ym",
+plugin= {"pretty","json:C://Users//Yogesh//git//NewCucumber1//target//Reportt.json"},
+monochrome=true
+)
+public class TestRunner extends AbstractTestNGCucumberTests{
 
 }
