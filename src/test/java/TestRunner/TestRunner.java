@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features={"classpath:Features"},
 glue= {"classpath:StepDefination"},
-tags= "@Ym",
-plugin= {"pretty","json:C://Users//Yogesh//git//NewCucumber1//target//Reportt.json"},
+tags= "@sauceLabsValid",
+plugin= {"pretty","html:C://Users//Yogesh//git//NewCucumber1//target//Reportt.html","json:C://Users//Yogesh//git//NewCucumber1//target//JsonReportt.json"},
 monochrome=true
 )
 public class TestRunner extends AbstractTestNGCucumberTests{
