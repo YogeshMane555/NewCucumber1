@@ -5,38 +5,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import PageObject.Object_SauceLabsLogin;
+import Utility.BaseClass;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Step_SauceLabsLogin {
 
-	WebDriver km;
+
 	Object_SauceLabsLogin osll;
+	
 	
 	@Given("User able to access Login URL")
 	public void user_able_to_access_login_url() {
-	    
-		System.setProperty("webdriver.chrome.driver", "C://Users//Yogesh//git//NewCucumber1//src//test//java//Drivers//chromedriver.exe");
 		
-		ChromeOptions co=new ChromeOptions();
-		
-		co.addArguments("start-maximized");
-		
-		co.addArguments("--incognito");
-		
-		co.addArguments("delete-all-cookies");
-		
-		km=new ChromeDriver(co);
-		
-		km.get("https://www.saucedemo.com/");
+		BaseClass.km.get("https://www.saucedemo.com/");
 		
 	}
 
 	@When("User enter valid username and valid password")
 	public void user_enter_valid_username_and_valid_password() {
 	    
-		osll=new Object_SauceLabsLogin(km);
+		osll=new Object_SauceLabsLogin(BaseClass.km);
 		
 		osll.enterUsername("standard_user");
 		
@@ -53,14 +45,12 @@ public class Step_SauceLabsLogin {
 	public void it_should_redirected_to_inventory_screen() {
 	    
 		osll.verifyAddToCart();
-		
-		km.quit();
 	}
 
 	@When("User enter Invalid username and password")
 	public void user_enter_invalid_username_and_password() {
 	 
-		osll=new Object_SauceLabsLogin(km);
+		osll=new Object_SauceLabsLogin(BaseClass.km);
 		
 		osll.enterUsername("locked_out_user");
 		
@@ -78,8 +68,7 @@ public class Step_SauceLabsLogin {
 	   
 		osll.getErrorMessage();
 		
-		km.quit();
 	}
 
-	
+
 }

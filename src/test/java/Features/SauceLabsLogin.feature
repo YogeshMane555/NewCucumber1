@@ -1,6 +1,7 @@
-@sauceLabsValid
+
 Feature: Login Functionality
 
+@sauceLabsValid
 Scenario: Login with valid credentials
 
 Given User able to access Login URL

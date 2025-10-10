@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features={"classpath:Features"},
 glue= {"classpath:StepDefination"},
-tags= "@sauceLabsValid",
+tags= "@addProduct",
 plugin= {"pretty","html:C://Users//Yogesh//git//NewCucumber1//target//Reportt.html","json:C://Users//Yogesh//git//NewCucumber1//target//JsonReportt.json"},
 monochrome=true
 )
